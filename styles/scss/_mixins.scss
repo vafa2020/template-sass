@@ -13,3 +13,23 @@
   font-weight: $weight;
   color: $color;
 }
+@mixin media($size) {
+  @if ($size==M) {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if($size==L) {
+    @media (min-width: 768px) and (max-width: 1200px) {
+      @content;
+    }
+  }
+}
+@mixin bodyStyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  background-color: $secondary-color;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 4px 4px 0;
+}

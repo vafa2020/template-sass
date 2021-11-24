@@ -39,8 +39,76 @@ body {
     }
 
     .logo-image {
-      @include box(40px, 40px);
+      @include box(50px, 50px);
       border-radius: 50%;
+      background-color: $primary-color;
+    }
+  }
+
+  .hamberger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    span {
+      @include box(25px, 5px);
+      border-radius: 3px;
+      background-color: $secondary-color;
+      margin-top: 3px;
+    }
+  }
+}
+.content {
+  display: flex;
+  align-items: center;
+  padding: 2rem 3rem;
+  .aside {
+    @include bodyStyle;
+    @include box(30%,450px);
+    margin-right: 20px;
+
+    div {
+      background-color: $primary-color;
+      padding: 30px 10px;
+      margin-top: 10px;
+      text-align: center;
+      border-radius: 10px;
+
+      a {
+        @include textStyle(1.5rem, bold, $secondary-color);
+        text-decoration: none;
+        &:hover {
+          color: $text-color;
+        }
+      }
+    }
+  }
+  .main {
+    @include bodyStyle;
+    @include box(70%,450px);
+    align-items: center;
+
+    img {
+      @include box(250px, 150px);
+      border-radius: 10px;
+    }
+    h1 {
+      margin-top: 10px;
+      @include textStyle(3rem, bold, $primary-color);
+    }
+    p {
+      margin-top: 20px;
+      @include textStyle(1.5rem, bold, $dark-color);
+    }
+  }
+}
+
+@include media(M) {
+  .header {
+    .hamberger-menu {
+      display: flex;
+    }
+    .navigation {
+      display: none;
     }
   }
 }
