@@ -73,6 +73,10 @@ body {
 .header .navigation .logo-image {
   width: 50px;
   height: 50px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 4px 4px 0;
+          box-shadow: rgba(0, 0, 0, 0.3) 0 4px 4px 0;
+  border-radius: 10px;
+  overflow: hidden;
   border-radius: 50%;
   background-color: #654fef;
 }
@@ -89,6 +93,10 @@ body {
 .header .hamberger-menu span {
   width: 25px;
   height: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 4px 4px 0;
+          box-shadow: rgba(0, 0, 0, 0.3) 0 4px 4px 0;
+  border-radius: 10px;
+  overflow: hidden;
   border-radius: 3px;
   background-color: #fff;
   margin-top: 3px;
@@ -112,25 +120,32 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #fff;
-  border-radius: 10px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 4px 4px 0;
-          box-shadow: rgba(0, 0, 0, 0.3) 0 4px 4px 0;
   width: 30%;
   height: 450px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 4px 4px 0;
+          box-shadow: rgba(0, 0, 0, 0.3) 0 4px 4px 0;
+  border-radius: 10px;
+  overflow: hidden;
   margin-right: 20px;
+  padding: 1rem;
 }
 
 .content .aside div {
   background-color: #654fef;
-  padding: 30px 10px;
   margin-top: 10px;
   text-align: center;
+  line-height: 90px;
   border-radius: 10px;
+  width: 100%;
+  height: 110px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 4px 4px 0;
+          box-shadow: rgba(0, 0, 0, 0.3) 0 4px 4px 0;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .content .aside div a {
@@ -152,39 +167,97 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  width: 70%;
+  height: 450px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 4px 4px 0;
+          box-shadow: rgba(0, 0, 0, 0.3) 0 4px 4px 0;
+  border-radius: 10px;
+  overflow: hidden;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   padding: 1rem;
-  background-color: #fff;
-  border-radius: 10px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 4px 4px 0;
-          box-shadow: rgba(0, 0, 0, 0.3) 0 4px 4px 0;
-  width: 70%;
-  height: 450px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .content .main img {
   width: 250px;
   height: 150px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 4px 4px 0;
+          box-shadow: rgba(0, 0, 0, 0.3) 0 4px 4px 0;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .content .main h1 {
   margin-top: 10px;
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: bold;
   color: #654fef;
 }
 
 .content .main p {
   margin-top: 20px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #222;
+}
+
+.cards {
+  padding: 2rem 3rem;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 10px;
+}
+
+.cards .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  width: 100%;
+  height: 470px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 4px 4px 0;
+          box-shadow: rgba(0, 0, 0, 0.3) 0 4px 4px 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cards .card img {
+  width: 100%;
+}
+
+.cards .card .description {
+  padding: 1rem;
+}
+
+.cards .card .description p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #222;
+  text-align: justify;
+  line-height: 1.3rem;
+}
+
+.cards .card .description span {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #654fef;
+  margin-top: 15px;
 }
 
 @media (max-width: 768px) {
@@ -195,6 +268,57 @@ body {
   }
   .header .navigation {
     display: none;
+  }
+  .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 1rem;
+  }
+  .content .main {
+    width: 100%;
+    height: 350px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 4px 4px 0;
+            box-shadow: rgba(0, 0, 0, 0.3) 0 4px 4px 0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .content .main h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #654fef;
+  }
+  .content .main p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #222;
+  }
+  .content .aside {
+    width: 100%;
+    height: 450px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 4px 4px 0;
+            box-shadow: rgba(0, 0, 0, 0.3) 0 4px 4px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1rem 0 0;
+  }
+  .cards {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    padding: 2rem 1rem;
+  }
+  .cards .card {
+    width: 100%;
+    height: 470px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 4px 4px 0;
+            box-shadow: rgba(0, 0, 0, 0.3) 0 4px 4px 0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .cards .card img {
+    height: 350px;
   }
 }
 /*# sourceMappingURL=style.css.map */
