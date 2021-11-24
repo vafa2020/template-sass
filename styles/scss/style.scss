@@ -111,22 +111,55 @@ body {
   grid-column-gap: 10px;
   .card {
     @include bodyStyle;
-    @include box(100%, 470px);
+    @include box(100%, inital);
     img {
       width: 100%;
     }
     .description {
       padding: 1rem;
+
       p {
         @include textStyle(1rem, 400, $dark-color);
         text-align: justify;
-        line-height: 1.3rem;
+        line-height: 1.2rem;
       }
       span {
         display: inline-block;
         @include textStyle(1rem, bold, $primary-color);
         margin-top: 15px;
       }
+    }
+  }
+}
+footer {
+  display: flex;
+  align-items: center;
+  padding: 2rem 3rem;
+  background-color: $primary-color;
+  .summery {
+    width: 50%;
+    margin-right: 20px;
+    p {
+      @include textStyle(1.5rem, 200, $secondary-color);
+      text-align: justify;
+    }
+  }
+  li {
+    list-style: none;
+  }
+  ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  a {
+    display: inline-block;
+    text-decoration: none;
+    @include textStyle(1.5rem, 200, $secondary-color);
+    padding: 10px;
+    transition: all 0.2s ease-in;
+    &:hover {
+      color: $dark-color;
     }
   }
 }
@@ -146,10 +179,10 @@ body {
     .main {
       @include box(100%, 350px);
       h1 {
-        @include textStyle(3rem, bold, $primary-color);
+        @include textStyle(2rem, bold, $primary-color);
       }
       p {
-        @include textStyle(1.3rem, bold, $dark-color);
+        @include textStyle(1rem, bold, $dark-color);
       }
     }
     .aside {
@@ -163,10 +196,16 @@ body {
     grid-row-gap: 20px;
     padding: 2rem 1rem;
     .card {
-      @include box(100%, 470px);
       img {
         height: 350px;
       }
     }
+  }
+}
+@include media(L) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 20px;
+    padding: 2rem 1rem;
   }
 }
