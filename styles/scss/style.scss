@@ -201,6 +201,20 @@ footer {
       }
     }
   }
+  footer {
+    flex-direction: column;
+    .summery {
+      width: 100%;
+    }
+    ul {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    a{
+        color: $dark-color;
+        padding: 0;
+        margin-top: 10px;
+    }
+  }
 }
 @include media(L) {
   .cards {
